@@ -1,29 +1,5 @@
-import base64
-import os.path
-
 import streamlit as st
 
-
-def icons_read(icon_name):
-    directory = "icons/"
-    file_path = os.path.join(directory, icon_name)
-    # Read the icon image files
-    with open(file_path, "r") as f:
-        icon = f.read()
-    return icon
-
-
-# Read the icon files using the function
-icon1_data = icons_read("efficacy.png")
-# icon2_data = icons_read("icon2.png")
-# icon3_data = icons_read("icon3.png")
-# icon4_data = icons_read("icon4.png")
-
-# Encode the icon images as base64
-icon1_base64 = base64.urlsafe_b64encode(icon1_data).decode("utf-8")
-# icon2_base64 = base64.b64encode(icon2_data).decode("utf-8")
-# icon3_base64 = base64.b64encode(icon3_data).decode("utf-8")
-# icon4_base64 = base64.b64encode(icon4_data).decode("utf-8")
 
 # Set the page configuration
 def render_about_us():
@@ -53,7 +29,7 @@ def render_about_us():
             <h2>Why Choose GENAI?</h2>
             <div style="display: flex; justify-content: space-between;">
               <div style="margin-right: 20px;">
-                <div><img src="data:image/png;base64,{icon1_base64}" alt="Icon 1" width="30" height="30"> Efficiency</div>
+                <div> Efficiency</div>
                 <div>Automate and streamline your customer support operations, reducing costs and improving response times</div>
               </div>
               <div style="margin-right: 20px;">
