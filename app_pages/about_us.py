@@ -8,7 +8,7 @@ def icons_read(icon_name):
     directory = "icons/"
     file_path = os.path.join(directory, icon_name)
     # Read the icon image files
-    with open(file_path, "rb") as f:
+    with open(file_path, "r") as f:
         icon = f.read()
     return icon
 
